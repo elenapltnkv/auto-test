@@ -1,9 +1,14 @@
 package test_cases;
+import api.BalanceData;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
 import io.restassured.specification.ResponseSpecification;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
-
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.core.IsEqual.equalTo;
 
 
 public class BalancesGet extends BaseTest{
@@ -26,7 +31,12 @@ public class BalancesGet extends BaseTest{
                 .post("")
                 .prettyPeek()
                 .then()
-                .statusCode(200);
+                .statusCode(200)
+                .extract()
+                .body()
+                .as(BalanceData.class);
+
+
     }
     @Test
     void getPingNegativeTest(){
