@@ -1,0 +1,5 @@
+{
+  "service_id": 500,
+  "method": "balances.get",
+  "params": {}
+}

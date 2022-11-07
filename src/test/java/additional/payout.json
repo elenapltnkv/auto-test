@@ -1,0 +1,27 @@
+{
+  "service_id": 501,
+  "method": "payment.out",
+  "params":
+  {
+    "payment":
+    {
+      "identifiers":
+      {
+        "c_id": 23195
+      },
+      "description": "комментарий",
+      "amount":
+      {
+        "value": 100,
+        "currency": "RUB"
+      },
+      "receiver":
+      {
+        "card":
+        {
+          "number": "5213243828510006"
+        }
+      }
+    }
+  }
+}
